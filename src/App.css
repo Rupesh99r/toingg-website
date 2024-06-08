@@ -1,38 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff7f50;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+main h1:hover {
+  color: #ff7f50;
+}
+
+main button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main button:first-of-type {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+main button:first-of-type:hover {
+  background-color: #e66941;
+}
+
+main button:last-of-type {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #ff7f50;
+}
+
+main button:last-of-type:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+aside {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 300px;
+  text-align: left;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+aside h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+aside h2:hover {
+  color: #ff7f50;
+}
+
+aside p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+aside form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+aside form input,
+aside form select,
+aside form button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+aside form input:focus,
+aside form select:focus {
+  border-color: #ff7f50;
+}
+
+aside form button {
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+aside form button:hover {
+  background-color: #e66941;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
